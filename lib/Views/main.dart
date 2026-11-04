@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Dashboard.dart';
-import 'package:flutter_application_1/ImageTest.dart';
-import 'package:flutter_application_1/ProfileCard.dart';
+import 'package:flutter_application_1/Views/Dashboard.dart';
+import 'package:flutter_application_1/Views/GridPage.dart';
+import 'package:flutter_application_1/Views/ImageTest.dart';
+import 'package:flutter_application_1/Views/ProfileCard.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,7 +58,7 @@ class NewWidget extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Dashboard()),
+                      MaterialPageRoute(builder: (context) => GridPage()),
                     );
                   },
                   child: const Text("Go to Second Page"),

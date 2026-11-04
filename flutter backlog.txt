@@ -1,0 +1,16 @@
+custom widget
+expanded and flex
+shrinkwrap
+scroll
+widget key
+statuful widget?
+List view, list tile
+Mrgin, padding
+
+factory constructor, squre bracket constuctor, squigly bracket constructor
+
+listvoewtypes (builder) istview.builder
+
+
+
+

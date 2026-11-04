@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Views/CustomWidgets/RecordTile.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -15,6 +16,7 @@ class NewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 240, 239, 239),
       appBar: AppBar(
         centerTitle: true,
         leading: Icon(Icons.menu),
@@ -38,7 +40,7 @@ class NewWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Card(
-                elevation: 15,
+                elevation: 5,
                 child: Container(
                   width: 150,
                   height: 100,
@@ -79,7 +81,7 @@ class NewWidget extends StatelessWidget {
                 ),
               ),
               Card(
-                elevation: 15,
+                elevation: 5,
                 child: Container(
                   width: 150,
                   height: 100,
@@ -120,7 +122,7 @@ class NewWidget extends StatelessWidget {
                 ),
               ),
               Card(
-                elevation: 15,
+                elevation: 5,
                 child: Container(
                   width: 150,
                   height: 100,
@@ -165,7 +167,7 @@ class NewWidget extends StatelessWidget {
           SizedBox(height: 10),
           Center(
             child: Card(
-              elevation: 15,
+              elevation: 5,
               child: Container(
                 width: 570,
                 height: 120,
@@ -196,35 +198,26 @@ class NewWidget extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          Text(
-            "Last Records Overview",
-            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              "Last Records Overview",
+              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+            ),
           ),
           SizedBox(height: 20),
-          Padding(
-            padding: EdgeInsetsGeometry.symmetric(horizontal: 50),
-            child: Card(
-              elevation: 10,
-              color: Colors.white,
-              child: ListTile(
-                contentPadding: EdgeInsets.all(88),
-                leading: Container(
-                  height: 10110,
-                  width: 100,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        const Color.fromARGB(255, 57, 176, 39),
-                        const Color.fromARGB(255, 123, 255, 117),
-                      ],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                    ),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: Icon(Icons.shopping_cart, color: Colors.white),
-                ),
-              ),
+          Expanded(
+            child: ListView.separated(
+              itemBuilder: (context, index) {
+                return RecordTile(
+                  icon: Icons.shopping_cart,
+                  title: "Shopping $index",
+                  subtitle: "Amazon",
+                  price: "-\$150.00",
+                );
+              },
+              separatorBuilder: (context, index) => SizedBox(height: 10),
+              itemCount: 5,
             ),
           ),
         ],
