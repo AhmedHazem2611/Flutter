@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Views/Dashboard.dart';
 import 'package:flutter_application_1/Views/GridPage.dart';
 import 'package:flutter_application_1/Views/ImageTest.dart';
+import 'package:flutter_application_1/Views/LoginForm.dart';
 import 'package:flutter_application_1/Views/ProfileCard.dart';
 
 void main() {
@@ -58,7 +59,7 @@ class NewWidget extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => GridPage()),
+                      MaterialPageRoute(builder: (context) => Loginform()),
                     );
                   },
                   child: const Text("Go to Second Page"),
