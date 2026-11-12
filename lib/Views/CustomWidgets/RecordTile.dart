@@ -6,7 +6,7 @@ class RecordTile extends StatelessWidget {
   final String subtitle;
   final String price;
 
-  RecordTile({
+  const RecordTile({
     super.key,
     required this.icon,
     required this.title,

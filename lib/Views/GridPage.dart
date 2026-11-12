@@ -15,6 +15,8 @@ class GridPage extends StatelessWidget {
     Product(name: "Product 9", price: "\$90.00", icon: Icons.laptop_windows),
     Product(name: "Product 10", price: "\$100.00", icon: Icons.watch),
   ];
+
+  GridPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
